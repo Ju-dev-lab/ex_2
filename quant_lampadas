@@ -1,0 +1,30 @@
+programa
+{
+	inclua biblioteca Tipos --> tp
+	real potencia_lampada, largura_comodo, comprimento_comodo
+	real area_comodo, potencia_total
+	inteiro quant_lampadas
+	
+	funcao inicio()
+	{
+		escreva("Informe a potência da lâmpada (em watts): ")
+		leia(potencia_lampada)
+		limpa()
+		escreva("Informe a largura do cômodo (em metros): ")
+		leia(largura_comodo)
+		limpa()
+		escreva("Informe o comprimento do cômodo (em metros): ")
+		leia(comprimento_comodo)
+		limpa()
+
+		area_comodo = largura_comodo * comprimento_comodo
+		potencia_total = area_comodo * 18
+		quant_lampadas = tp.real_para_inteiro(potencia_total / potencia_lampada)
+		se(quant_lampadas == 0)
+		{
+			quant_lampadas = quant_lampadas + 1
+		}
+		escreva("Serão necessárias ", quant_lampadas, " lâmpadas.")
+		
+	}
+}
